@@ -1,0 +1,304 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i|Oswald|Source+Serif+Pro");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.blue-box {
+  background: lightblue;
+  width: 100%;
+  height: 100%; }
+
+/* Typography */
+body {
+  font-family: 'Source Serif Pro', serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400; }
+
+h1 {
+  font-family: 'Oswald', 'Montserrat', sans-serif;
+  font-size: 3rem;
+  color: #ffc400; }
+
+h2 {
+  font-size: 2rem; }
+
+h3 {
+  font-size: 1.5rem; }
+
+h4 {
+  font-size: 1rem; }
+
+h5 {
+  font-size: 1rem;
+  margin-top: 1rem; }
+
+h6 {
+  font-family: 'Source Serif Pro', serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: #c8c8c8; }
+
+p {
+  font-size: 1rem; }
+
+.inner-cell {
+  color: rgba(20, 30, 40, 0.25);
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-style: italic; }
+
+/* Layout */
+#messages {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 320px; }
+  #messages .message {
+    display: grid;
+    grid-template-columns: 1fr 40px;
+    padding: 20px;
+    margin-top: 10px;
+    box-shadow: 0 5px 20px #646464;
+    font-style: italic; }
+    #messages .message p {
+      align-self: center;
+      justify-self: center; }
+    #messages .message .button {
+      padding: 10px;
+      background: rgba(0, 0, 0, 0.2);
+      color: white;
+      border: 0;
+      margin-left: 10px;
+      align-self: center;
+      justify-self: center; }
+    #messages .message.alert {
+      background: #fdfb93;
+      color: black; }
+    #messages .message.error {
+      background: #832626;
+      color: white; }
+    #messages .message.success {
+      background: #247e4c;
+      color: white; }
+
+#header #header-content {
+  padding: 20px 20px 0;
+  transition: margin-top 0.5s; }
+
+#header #generation-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin-top: 20px; }
+  #header #generation-form .title {
+    grid-column: 1 / -1; }
+  #header #generation-form button {
+    grid-column: 2 / 3;
+    background: #ffc400;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: background 0.25s; }
+    #header #generation-form button:hover {
+      background: #cc9d00; }
+
+#header #header-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform ease 0.5s; }
+  #header #header-controls a .control {
+    height: 60px;
+    width: 60px; }
+    #header #header-controls a .control .header-control-bar {
+      position: absolute;
+      background: #c8c8c8;
+      width: 30px;
+      height: 4px;
+      border-radius: 2px;
+      transition: transform ease 0.125s; }
+    #header #header-controls a .control #bar-1 {
+      transform: translate(1px, 14px) rotate(-28deg);
+      transform-origin: 100% 50%; }
+    #header #header-controls a .control #bar-2 {
+      transform: translate(29px, 14px) rotate(28deg);
+      transform-origin: 0% 50%; }
+    #header #header-controls a .control #bar-3 {
+      transform: translate(1px, 28px) rotate(-28deg);
+      transform-origin: 100% 50%; }
+    #header #header-controls a .control #bar-4 {
+      transform: translate(29px, 28px) rotate(28deg);
+      transform-origin: 0% 50%; }
+  #header #header-controls a:hover .control #bar-1 {
+    transform: translate(1px, 14px) rotate(-35deg); }
+  #header #header-controls a:hover .control #bar-2 {
+    transform: translate(29px, 14px) rotate(35deg); }
+  #header #header-controls a:hover .control #bar-3 {
+    transform: translate(1px, 28px) rotate(-35deg); }
+  #header #header-controls a:hover .control #bar-4 {
+    transform: translate(29px, 28px) rotate(35deg); }
+  #header #header-controls.closed {
+    transform: rotate(180deg); }
+
+#container {
+  background: #d2d2d2;
+  display: flex;
+  justify-content: center;
+  padding: 24pt 0 72pt; }
+
+#paper {
+  background: white;
+  box-shadow: 0 15px 50px #646464;
+  width: 612pt;
+  height: 792pt; }
+  #paper #page {
+    height: 720pt;
+    margin: 36pt;
+    display: grid;
+    grid-template-rows: 9pt 99pt auto 90pt 45pt;
+    grid-gap: 18pt; }
+    #paper #page #copyright {
+      text-align: right; }
+      #paper #page #copyright img {
+        height: 8pt;
+        width: auto; }
+    #paper #page #grid .grid-random, #paper #page #grid .grid-practice {
+      display: grid; }
+    #paper #page #grid .grid-practice {
+      grid-template-columns: repeat(2, 261pt);
+      grid-gap: 18pt; }
+      #paper #page #grid .grid-practice .grid-tile {
+        display: grid;
+        grid-template-columns: repeat(9, 29pt);
+        grid-auto-rows: 27pt;
+        border-top: 1px solid black;
+        border-left: 1px solid black; }
+    #paper #page #grid .grid-random {
+      grid-template-columns: repeat(15, 36pt);
+      grid-auto-rows: 36pt;
+      border-top: 1px solid black;
+      border-left: 1px solid black; }
+    #paper #page .measure {
+      border-right: 1px solid black;
+      border-bottom: 1px solid black;
+      padding: 5px; }
+      #paper #page .measure .inner-measure {
+        width: 100%;
+        height: 100%;
+        color: rgba(20, 30, 40, 0.5);
+        font-size: 0.75rem; }
+    #paper #page #footer {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 18pt; }
+      #paper #page #footer .footer-column {
+        display: grid;
+        grid-template-columns: 15pt auto;
+        grid-template-rows: repeat(6, 15pt); }
+      #paper #page #footer .footer-column-title {
+        grid-column: 1 / 3; }
+      #paper #page #footer .footer-column-number, #paper #page #footer .footer-column-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 1px solid black; }
+      #paper #page #footer .footer-column-box {
+        border-left: 0; }
+    #paper #page #logo img {
+      height: 45pt;
+      width: auto; }
+
+fieldset legend {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  margin-bottom: 5px; }
+
+fieldset input[type="text"], fieldset input[type="number"] {
+  font-family: 'Source Serif Pro', serif;
+  border: 0;
+  border-bottom: 1px solid #141e28;
+  font-size: 1rem;
+  font-weight: 300;
+  padding-bottom: 2px;
+  width: 100%; }
+
+fieldset.title {
+  min-height: 40px; }
+  fieldset.title .btn {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: #c8c8c8;
+    color: #afaeae;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    transition: background 0.25s, color 0.25s;
+    cursor: pointer; }
+  fieldset.title input[type="radio"].toggle {
+    display: none; }
+    fieldset.title input[type="radio"].toggle + label:hover {
+      background: #afaeae;
+      color: #fbfbfb; }
+    fieldset.title input[type="radio"].toggle + label:first-of-type {
+      margin-right: 18px; }
+    fieldset.title input[type="radio"].toggle:checked + label {
+      background: #ffc400;
+      color: #f0f0f0;
+      cursor: pointer; }
