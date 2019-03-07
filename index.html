@@ -178,6 +178,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.4/vue.min.js"></script>
 	<script src="node_modules/jspdf/dist/jspdf.min.js"></script>
 	<script src="node_modules/html2canvas/dist/html2canvas.min.js"></script>
+	<script src="node_modules/moment/min/moment.min.js"></script>
 	<script type="text/javascript">
 		var app = new Vue({
 			el: '#app',
@@ -237,19 +238,25 @@
 
 					if (this.piece != '') {
 
-						const element = document.getElementById('paper');
+						//	Get the title of the piece, and format the name
+						const date = moment().format("YYYY-MM-DD");
+						const piece = this.piece.replace(/\s+/g, '-').toLowerCase()
+						const measures = ((this.sheet == 'practice') ? this.measures + 'x' + this.repeat : this.startingMeasure + '-' + this.endingMeasure + '-' + this.repeat + 'x');
+						const filename = `${date}.${piece}-${measures}`
+
+						const element = document.getElementById('paper')
 
 						html2canvas(element, { scale: 2, useCORS: true }).then(canvas => {
-							const imgData = canvas.toDataURL('image/jpeg', 1.0);
+							const imgData = canvas.toDataURL('image/jpeg', 1.0)
 
 							// document.body.appendChild(canvas)
 
-							const doc = new jsPDF('p', 'pt', 'letter');
-							doc.addImage(imgData, 'JPEG', 0, 0, 612, 792);
-							doc.save('sample-file.pdf');
+							const doc = new jsPDF('p', 'pt', 'letter')
+							doc.addImage(imgData, 'JPEG', 0, 0, 612, 792)
+							doc.save(filename + '.pdf')
 
 							//	Send success message
-							this.message('success', 'PDF has been created.');
+							this.message('success', 'PDF has been created.')
 
 						});
 
