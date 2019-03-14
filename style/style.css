@@ -205,7 +205,7 @@ p {
     height: 720pt;
     margin: 36pt;
     display: grid;
-    grid-template-rows: 9pt 99pt auto 90pt 45pt;
+    grid-template-rows: 9pt 99pt auto 88pt 45pt;
     grid-gap: 18pt; }
     #paper #page #copyright {
       text-align: right; }
@@ -215,12 +215,12 @@ p {
     #paper #page #grid .grid-random, #paper #page #grid .grid-practice {
       display: grid; }
     #paper #page #grid .grid-practice {
-      grid-template-columns: repeat(2, 261pt);
-      grid-gap: 18pt; }
+      grid-template-columns: repeat(2, 264pt);
+      grid-gap: 12pt; }
       #paper #page #grid .grid-practice .grid-tile {
         display: grid;
-        grid-template-columns: repeat(9, 29pt);
-        grid-auto-rows: 27pt;
+        grid-template-columns: repeat(8, 33pt);
+        grid-auto-rows: 33pt;
         border-top: 1px solid black;
         border-left: 1px solid black; }
     #paper #page #grid .grid-random {
@@ -244,7 +244,7 @@ p {
       #paper #page #footer .footer-column {
         display: grid;
         grid-template-columns: 15pt auto;
-        grid-template-rows: repeat(6, 15pt); }
+        grid-template-rows: repeat(4, 22pt); }
       #paper #page #footer .footer-column-title {
         grid-column: 1 / 3; }
       #paper #page #footer .footer-column-number, #paper #page #footer .footer-column-box {
