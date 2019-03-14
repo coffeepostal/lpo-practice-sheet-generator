@@ -53,7 +53,7 @@
 
 					<fieldset v-show="sheet === 'practice'">
 						<legend>Number of Measures</legend>
-						<input v-model.number="measures" @keyup="repeatRange" type="number" min="1" max="126">
+						<input v-model.number="measures" @keyup="repeatRange" type="number" min="1" max="96">
 					</fieldset>
 
 					<fieldset v-show=" sheet==='random'">
@@ -186,7 +186,7 @@
 				composer: '',
 				date: moment().format("dddd, MMMM Do YYYY"),
 				measures: 40,
-				measuresMax: 126,
+				measuresMax: 96,
 				repeat: 1,
 				repeatMax: 6,
 				startingMeasure: 13,
@@ -310,19 +310,16 @@
 						if (repeat > 2) {
 
 							switch (true) {
-								case (0 <= measures && measures <= 9):
+								case (0 <= measures && measures <= 8):
 									this.repeatMax = 18
 									break
-								case (9 < measures && measures <= 18):
+								case (8 < measures && measures <= 16):
 									this.repeatMax = 10
 									break
-								case (18 < measures && measures <= 27):
-									this.repeatMax = 8
-									break
-								case (27 < measures && measures <= 36):
+								case (16 < measures && measures <= 32):
 									this.repeatMax = 6
 									break
-								case (36 < measures && measures <= 63):
+								case (32 < measures && measures <= 48):
 									this.repeatMax = 4
 									break
 								default:
@@ -338,13 +335,13 @@
 						}
 
 						//	 Check to see if there are too many measures to render the PDF correctly
-						if (measures < 9) {
-							this.measures = 9
-							this.message('error', 'There can be a minimum of 9 measures')
+						if (measures < 8) {
+							this.measures = 8
+							this.message('error', 'There can be a minimum of 8 measures')
 						}
-						if (measures > 126) {
-							this.measures = 126
-							this.message('error', 'There can be a maximum of 126 measures')
+						if (measures > 96) {
+							this.measures = 96
+							this.message('error', 'There can be a maximum of 96 measures')
 						}
 
 					} else {
@@ -362,10 +359,10 @@
 						}
 
 						//	Make sure there aren't too many boxes to render PDF
-						if (measureRange > 165) {
+						if (measureRange > 192) {
 							console.log('Too big')
-							this.endingMeasure = startingMeasure + 164
-							this.message('error', 'There can only be a maximum of 165 total random measures')
+							this.endingMeasure = startingMeasure + 191
+							this.message('error', 'There can only be a maximum of 192 total random measures')
 						}
 
 					}

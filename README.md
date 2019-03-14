@@ -12,6 +12,6 @@ The Practice Sheet Generator and Random Measure Generator are tools for teachers
 - [ ] Re-work alert system so that an empty input field doesn't trigger an error while still active
 - [x] Make Weekly Missions/Lessons note section only 3 lines, with more spacing
 - [x] Have the generated PDF filename be the piece name plus the measure count
-- [x] Add a date stamp to generated PDF~~
-- [ ] Change Practice Sheet measure width maximum to 8, as most music phrases are in multiples of 2
+- [x] Add a date stamp to generated PDF
+- [x] Change Practice Sheet measure width maximum to 8, as most music phrases are in multiples of 2
 - [ ] Create user setting to make measure boxes bigger
