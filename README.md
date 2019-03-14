@@ -15,3 +15,4 @@ The Practice Sheet Generator and Random Measure Generator are tools for teachers
 - [x] Add a date stamp to generated PDF
 - [x] Change Practice Sheet measure width maximum to 8, as most music phrases are in multiples of 2
 - [ ] Create user setting to make measure boxes bigger
+- [ ] Add email requirement to submit form
