@@ -9,6 +9,14 @@
 	],
 "creatorBuild": "29156",
 "files": {
+	"/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.gitignore",
+		"oF": 0
+		},
 	"/img/tpo-logo.jpg": {
 		"ft": 16384,
 		"iS": 32493,
@@ -52,6 +60,25 @@
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
+		},
+	"/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
 		},
 	"/style/_mixins.scss": {
 		"aP": 0,
@@ -109,7 +136,7 @@
 	},
 "projectAttributes": {
 	"creationDate": 572057554.89281499,
-	"displayValue": "couch-to-concert-hall-practice-sheet",
+	"displayValue": "lpo-practice-sheet-generator",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "meme-soon",
 	"iconImageWasSetByUser": 0

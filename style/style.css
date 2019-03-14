@@ -254,9 +254,19 @@ p {
         border-bottom: 1px solid black; }
       #paper #page #footer .footer-column-box {
         border-left: 0; }
-    #paper #page #logo img {
-      height: 45pt;
-      width: auto; }
+    #paper #page #logo-date {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px; }
+      #paper #page #logo-date #logo img {
+        height: 45pt;
+        width: auto; }
+      #paper #page #logo-date #date {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end; }
+        #paper #page #logo-date #date h4 {
+          color: rgba(20, 30, 40, 0.5); }
 
 fieldset legend {
   font-size: 0.75rem;

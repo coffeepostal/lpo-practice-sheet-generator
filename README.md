@@ -1,4 +1,4 @@
-# Learn Piano Online - Practice Sheet Generator and Random Measure Generator
+# Teach Piano Online - Practice Sheet Generator and Random Measure Generator
 The Practice Sheet Generator and Random Measure Generator are tools for teachers to create practice resources for their students.
 
 ## Dependencies

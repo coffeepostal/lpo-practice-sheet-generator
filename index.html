@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>vue-jspdf</title>
+	<title>Teach Piano Online - Practice Sheet Generator</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="style/style.css">
 </head>
@@ -160,8 +160,13 @@
 
 					</div>
 
-					<div id="logo">
-						<img src="img/tpo-logo.jpg">
+					<div id="logo-date">
+						<div id="logo">
+							<img src="img/tpo-logo.jpg">
+						</div>
+						<div id="date">
+							<h4>{{ date }}</h4>
+						</div>
 					</div>
 
 				</div>
@@ -187,6 +192,7 @@
 				student: '',
 				piece: '',
 				composer: '',
+				date: moment().format("dddd, MMMM Do YYYY"),
 				measures: 40,
 				measuresMax: 126,
 				repeat: 1,

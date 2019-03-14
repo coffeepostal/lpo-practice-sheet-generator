@@ -316,10 +316,25 @@ p {
 			}
 		}
 
-		#logo {
-			img {
-				height: 45pt;
-				width: auto;
+		#logo-date {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 20px;
+
+			#logo {
+				img {
+					height: 45pt;
+					width: auto;
+				}
+			}
+
+			#date {
+				display: flex;
+				align-items: flex-end;
+				justify-content: flex-end;
+				h4 {
+					color: rgba($black, $alpha: 0.5);
+				}
 			}
 		}
 	}
