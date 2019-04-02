@@ -182,7 +182,7 @@
 	<script src="node_modules/html2canvas/dist/html2canvas.min.js"></script>
 	<script src="node_modules/moment/min/moment.min.js"></script>
 	<script type="text/javascript">
-		var app = new Vue({
+		let app = new Vue({
 			el: '#app',
 			data: {
 				sheet: 'practice',
@@ -205,12 +205,12 @@
 				randomizedMeasures() {
 					console.log('randomizedMeasures() has been called')
 					//	Setup variables
-					var rangedMeasures = [];
-					var repeat = this.repeat;
-					var randomizedMeasures = [];
+					let rangedMeasures = [];
+					let repeat = this.repeat;
+					let randomizedMeasures = [];
 
 					//	Create array from low/high values
-					for (var i = this.startingMeasure; i <= this.endingMeasure; i++) {
+					for (let i = this.startingMeasure; i <= this.endingMeasure; i++) {
 
 						//	Add 'repeat' copies of this number
 						for (let i2 = 0; i2 < repeat; i2++) {
@@ -376,12 +376,12 @@
 				showHideControls() {
 
 					//  Get the elements
-					var header = document.getElementById('header');
-					var headerControls = document.getElementById('header-controls');
-					var form = document.getElementById('header-content');
+					let header = document.getElementById('header');
+					let headerControls = document.getElementById('header-controls');
+					let form = document.getElementById('header-content');
 
 					// Calculates form height, adds "-" and "px"
-					var height = "-" + form.clientHeight + "px";
+					let height = "-" + form.clientHeight + "px";
 
 					//  Check to see if the "closed" class is on the headerControls
 					if (headerControls.classList == '') {
