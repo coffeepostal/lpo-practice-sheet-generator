@@ -276,7 +276,7 @@ fieldset legend {
   font-weight: 900;
   margin-bottom: 5px; }
 
-fieldset input[type="text"], fieldset input[type="number"] {
+fieldset input[type="text"], fieldset input[type="number"], fieldset input[type="email"] {
   font-family: 'Source Serif Pro', serif;
   border: 0;
   border-bottom: 1px solid #141e28;

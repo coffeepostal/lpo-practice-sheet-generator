@@ -71,6 +71,11 @@
 						<input v-model.number="repeat" @keyup="repeatRange" type="number" min="1">
 					</fieldset>
 
+					<fieldset>
+						<legend title="We require an email address to track uses">Email Address ❓</legend>
+						<input type="email" placeholder="example@example.com">
+					</fieldset>
+
 					<button @click="exportPDF">Export PDF</button>
 				</div>
 
